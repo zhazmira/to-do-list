@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Popins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-blend-mode: screen;
+    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+}
+
+.wrapper {
+    max-width: 400px;
+    width: 100%;
+    background-color: floralwhite;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.wrapper header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .inputField {
+    display: flex;
+    height: 45px;
+    width: 100%;
+}
+
+.inputField input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputField button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #FF6F91;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputField button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoList li {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoList li span {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background: #FFC75F;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todoList li:hover span {
+    right: 0px;
+}
+
+.wrapper .footer {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer button {
+    border: none;
+    outline: none;
+    background: #FF6F91;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px 8px;
+}
